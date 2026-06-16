@@ -1,0 +1,230 @@
+/* ============================================================
+   Business Trend Analysis — Minimal Dark Theme
+   Design: Clean, quiet, professional. No noise.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Root Variables ──────────────────────────────────────── */
+:root {
+    --bg:          #09090b;
+    --surface:     #121214;
+    --surface-2:   #18181b;
+    --border:      #27272a;
+    --accent:      #fafafa;
+    --success:     #10b981;
+    --warning:     #f59e0b;
+    --danger:      #ef4444;
+    --text-1:      #fafafa;
+    --text-2:      #a1a1aa;
+    --text-3:      #71717a;
+    --radius:      8px;
+    --radius-sm:   4px;
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+.stApp {
+    background-color: var(--bg) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-1);
+}
+
+/* Hide Streamlit footer */
+footer { visibility: hidden; }
+header { background: transparent !important; }
+
+/* ── Main Header ─────────────────────────────────────────── */
+.main-header {
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 0 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-1);
+    letter-spacing: -0.3px;
+    margin: 0;
+}
+
+.main-header p {
+    font-size: 0.9rem;
+    color: var(--text-2);
+    margin-top: 0.35rem;
+    font-weight: 400;
+}
+
+/* ── Section Headers ─────────────────────────────────────── */
+.section-header {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0;
+    border-bottom: none;
+    display: block;
+    -webkit-text-fill-color: var(--text-3);
+    background: none;
+}
+
+/* ── Streamlit Native Metric Overrides ───────────────────── */
+[data-testid="metric-container"] {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    padding: 1.25rem 1.5rem !important;
+}
+
+[data-testid="stMetricLabel"] {
+    font-size: 0.76rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    color: var(--text-2) !important;
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: var(--text-1) !important;
+    letter-spacing: -0.5px !important;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+}
+
+/* ── Alert Boxes ─────────────────────────────────────────── */
+.alert-box {
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-sm);
+    margin: 1.25rem 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    border-left: 2px solid transparent;
+    background: var(--surface);
+    color: var(--text-1) !important;
+}
+
+.alert-green { border-left-color: var(--success); }
+.alert-yellow { border-left-color: var(--warning); }
+.alert-red { border-left-color: var(--danger); }
+
+/* ── KPI Cards (Executive Summary) ──────────────────────── */
+.kpi-container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.5rem;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s ease;
+}
+
+.kpi-container:hover {
+    border-color: rgba(255,255,255,0.14);
+}
+
+.kpi-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-2);
+    margin-bottom: 0.75rem;
+}
+
+.kpi-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-1);
+    letter-spacing: -0.5px;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+.kpi-sub {
+    font-size: 0.78rem;
+    color: var(--text-3);
+    margin-top: 0.5rem;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background: var(--surface) !important;
+    border-right: 1px solid var(--border) !important;
+}
+
+[data-testid="stSidebar"] .stSelectbox label,
+[data-testid="stSidebar"] .stRadio label,
+[data-testid="stSidebar"] .stNumberInput label,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span {
+    color: var(--text-2) !important;
+    font-size: 0.83rem;
+}
+
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: var(--text-1) !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* ── Expander ────────────────────────────────────────────── */
+[data-testid="stExpander"] {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+/* ── Data Table ──────────────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+/* ── Info / st.info boxes ────────────────────────────────── */
+[data-testid="stInfo"] {
+    background: var(--surface-2) !important;
+    border: 1px solid var(--border) !important;
+    border-left: 3px solid var(--accent) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: 0.83rem !important;
+    color: var(--text-2) !important;
+}
+
+/* ── Horizontal Rule ─────────────────────────────────────── */
+hr {
+    border-color: var(--border) !important;
+}
+
+/* ── Input elements ──────────────────────────────────────── */
+[data-testid="stSelectbox"] > div,
+[data-testid="stNumberInput"] > div > div > input {
+    background: var(--surface-2) !important;
+    border-color: var(--border) !important;
+    color: var(--text-1) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: 0.85rem !important;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.dashboard-footer {
+    text-align: center;
+    color: var(--text-3);
+    font-size: 0.75rem;
+    padding: 2rem 0 1rem;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+}

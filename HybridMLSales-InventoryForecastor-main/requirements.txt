@@ -1,0 +1,25 @@
+# Core Dashboard Dependencies
+streamlit==1.31.0
+pandas==2.1.4
+numpy==1.26.3
+plotly==5.18.0
+
+# Optional: For ML Model Integration
+# Uncomment based on your chosen forecasting approach
+
+# Time Series Models
+# statsmodels==0.14.1
+# prophet==1.1.5
+
+# Deep Learning Models
+# tensorflow==2.15.0
+# scikit-learn==1.4.0
+
+# Database Connectivity (if needed)
+# sqlalchemy==2.0.25
+# psycopg2-binary==2.9.9  # PostgreSQL
+# pymysql==1.1.0          # MySQL
+
+# Additional Utilities
+# openpyxl==3.1.2         # Excel file support
+# python-dotenv==1.0.0    # Environment variables
